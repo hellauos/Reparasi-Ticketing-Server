@@ -22,6 +22,7 @@ app.use(cookieParser());
 app.use("/", express.static(path.join(__dirname, "/public")));
 
 app.use("/", require("./routes/root"));
+app.use("/users", require("./routes/userRoutes"));
 
 // * --> Wildcard, untuk meng-handle error 404
 app.all("*", (req, res) => {
