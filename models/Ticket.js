@@ -24,4 +24,4 @@ ticketSchema.plugin(AutoIncrement, {
   start_seq: 1000,
 });
 
-module.exports = mongoose.model("Note", ticketSchema);
+module.exports = mongoose.model("Ticket", ticketSchema);
