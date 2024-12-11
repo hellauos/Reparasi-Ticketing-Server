@@ -16,8 +16,8 @@ const JWTVerifier = (req, res, next) => {
 
     req.username = decoded.infoUser.username;
     req.roles = decoded.infoUser.roles;
+    req.id = decoded.infoUser.id
     next();
   });
 };
-
-module.exports = JWTVerifier;
+module.exports = {JWTVerifier};

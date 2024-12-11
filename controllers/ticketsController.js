@@ -1,5 +1,6 @@
 const Ticket = require("../models/Ticket");
 const User = require("../models/User");
+const asyncHandler = require("express-async-handler");
 
 const getAllTickets = asyncHandler(async (req, res) => {
   // query untuk ambil data ticket
@@ -96,7 +97,7 @@ const deleteTicket = asyncHandler(async (req, res) => {
 
   const result = await ticket.deleteOne();
 
-  res.json({ message: `Ticket dengan ${result.id} berhasil dihapus!` });
+  res.json({ message: `Ticket dengan ${id} berhasil dihapus!` });
 });
 
 module.exports = {
